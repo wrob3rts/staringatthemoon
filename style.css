@@ -1,0 +1,41 @@
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('JetBrainsMonoNL-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-image: url('img/moon.jpg');
+    background-size: contain; 
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+    justify-content: flex-start;
+    height: 100vh;          
+    margin: 0;
+    background-color: #000000;
+}
+
+canvas {
+    margin: 10px 0;
+}
+
+#visualizer, #clock, #calendar {
+    margin: 0px auto;
+}
+
+#visualizer {
+    margin-top: 50px;
+}
+
+#clock {
+    margin-bottom: -90px;
+}
+
+#albumCoverArt{
+    display: block;
+    max-width: 100%;
+}
