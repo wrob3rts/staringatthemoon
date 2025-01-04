@@ -20,7 +20,7 @@ window.wallpaperRegisterAudioListener((audioData) => {
 
     for (let i = 0; i < 64; i++) {
         const value1 = audioData[i] || 0;
-        const value2 = audioData[i + 24] || 0;
+        const value2 = audioData[i + audioData.length/2] || 0;
         audioHeight[i] = Math.max(((value1 + value2) / 2), restingHeight) * height * amplitude;
     }
 
