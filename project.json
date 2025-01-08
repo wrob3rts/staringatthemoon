@@ -1,4 +1,6 @@
 {
+	"contentrating" : "Everyone",
+	"description" : "A Web Version one of one my other wallpapers. I'd recommend the other one for now.",
 	"file" : "index.html",
 	"general" : 
 	{
@@ -14,9 +16,11 @@
 		},
 		"supportsaudioprocessing" : true
 	},
-	"snapshotformat" : -1,
-	"snapshotoverlay" : "",
-	"title" : "StaringAtTheMoon",
+	"preview" : "preview.jpg",
+	"ratingsex" : "none",
+	"ratingviolence" : "none",
+	"tags" : [ "Sci-Fi" ],
+	"title" : "Staring At The Moon",
 	"type" : "web",
 	"version" : 0
 }
