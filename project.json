@@ -13,14 +13,13 @@
 				"type" : "color",
 				"value" : "0 0 0"
 			}
-		},
-		"supportsaudioprocessing" : true
+		}
 	},
 	"preview" : "preview.jpg",
 	"ratingsex" : "none",
 	"ratingviolence" : "none",
 	"tags" : [ "Sci-Fi" ],
 	"title" : "Staring At The Moon",
-	"type" : "web",
+	"type" : "Web",
 	"version" : 0
 }
