@@ -17,6 +17,7 @@ body {
     height: 100vh;          
     margin: 0;
     background-color: #000000;
+    color: #ffffff;
 }
 
 canvas {
@@ -32,10 +33,14 @@ canvas {
 }
 
 #clock {
+    margin-top: 10px;
     margin-bottom: -90px;
 }
 
-#albumCoverArt{
-    display: block;
-    max-width: 100%;
+#calendar {
+    margin-bottom: -65px;
+}
+
+#musicInfo {
+    color: #ffffff;
 }
