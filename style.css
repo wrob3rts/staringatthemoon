@@ -41,6 +41,24 @@ canvas {
     margin-bottom: -65px;
 }
 
-#musicInfo {
+#musiccontainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20;
+}
+
+#titlecontainer {
+    padding: 20px;
+    font-family: "JetBrains Mono";
+}
+
+#songTitle{
     color: #ffffff;
+    font-size: 40px;
+}
+
+#artistTitle{
+    color: #ffffff;
+    font-size: 20px;
 }
