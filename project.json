@@ -57,6 +57,22 @@
 				"type" : "color",
 				"value" : "0 0 0"
 			},
+			"showalbumart" : 
+			{
+				"index" : 10,
+				"order" : 110,
+				"text" : "Show Album Art",
+				"type" : "bool",
+				"value" : true
+			},
+			"showartistname" : 
+			{
+				"index" : 12,
+				"order" : 112,
+				"text" : "Show Artist Name",
+				"type" : "bool",
+				"value" : true
+			},
 			"showclock" : 
 			{
 				"index" : 5,
@@ -70,6 +86,14 @@
 				"index" : 7,
 				"order" : 107,
 				"text" : "Show Date",
+				"type" : "bool",
+				"value" : true
+			},
+			"showsongtitle" : 
+			{
+				"index" : 11,
+				"order" : 111,
+				"text" : "Show Song Title",
 				"type" : "bool",
 				"value" : true
 			},
@@ -107,6 +131,6 @@
 	"ratingviolence" : "none",
 	"tags" : [ "Sci-Fi" ],
 	"title" : "Staring At The Moon",
-	"type" : "Web",
+	"type" : "web",
 	"version" : 0
 }

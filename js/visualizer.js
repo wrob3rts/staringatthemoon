@@ -10,6 +10,8 @@ let barWidth = (width / numBars) - (numBars - 1) * spaceBetween / numBars;
 let restingHeight = 0.0125;
 let amplitude = 1.5;
 
+let lastFrame = Array(numBars).fill(0);
+
 function updateDimensions() {
     width = canvas.width;
     height = canvas.height;
@@ -61,6 +63,7 @@ window.wallpaperRegisterAudioListener((audioData) => {
             const end = Math.ceil((i + 1) * 64 / numBars);
             const segment = audioHeight.slice(start, end);
             barHeights[i] = segment.reduce((sum, val) => sum + val, 0) / segment.length;
+            barHeights[i] = (barHeights[i]+lastFrame[i])/2;
         }
 
         // Draw bars
@@ -70,5 +73,7 @@ window.wallpaperRegisterAudioListener((audioData) => {
             ctx.fillStyle = '#ffffff';
             ctx.fillRect(x, height - barHeight, barWidth, barHeight);
         }
+
+        lastFrame = barHeights;
     }
 });

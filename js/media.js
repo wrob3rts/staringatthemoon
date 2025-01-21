@@ -1,22 +1,37 @@
 let albumCover = document.getElementById('albumCover');
-let displayInfo = false;
+let displayAlbumArt = true;
+let displaySongTitle = true;
+let displayArtistName = true;
+let playPause = false;
 let artistTitle = document.getElementById('artistTitle');
 let songTitle = document.getElementById('songTitle');
 
+window.wallpaperPropertyListener = {
+    applyUserProperties: function (properties) {
+        if(properties.showalbumart) {
+            displayAlbumArt = properties.showalbumart.value;
+        }
+        if(properties.showsongtitle) {
+            displaySongTitle = properties.showsongtitle.value;
+        }
+        if(properties.showartistname) {
+            displayArtistName = properties.showartistname.value;
+        }
+    }
+}
+
 function wallpaperMediaPropertiesListener(event){
-    artistTitle.textContent = event.artist;
-    console.log(artistTitle);
-    songTitle.textContent = event.title;
-    console.log(songTitle);
+    artistTitle.textContent = displayArtistName ? event.artist : "";
+    songTitle.textContent = displaySongTitle ? event.title : "";
 }
 
 function wallpaperMediaPlaybackListener(event) {
-    displayInfo = (event.state == window.wallpaperMediaIntegration.PLAYBACK_STOPPED) ? false : true;
-    albumCover.width, albumCover.height = displayInfo ? 144 : 0;
+    playPause = (event.state == window.wallpaperMediaIntegration.PLAYBACK_STOPPED && !displayInfo) ? false : true;
+    albumCover.width, albumCover.height = (albumCover != null && playPause) ? 144 : 0;
 }
 
 function wallpaperMediaThumbnailListener(event){
-    albumCover.src = (displayInfo) ? event.thumbnail : "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=";
+    albumCover.src = event.thumbnail;
 }
 
 window.wallpaperRegisterMediaPropertiesListener(wallpaperMediaPropertiesListener);
