@@ -1,6 +1,6 @@
 {
 	"contentrating" : "Everyone",
-	"description" : "A Web Version one of one my other wallpapers. I'd recommend the other one for now.",
+	"description" : "A Web Version of one of my other wallpapers. Constantly improving because I am constantly using it :)",
 	"file" : "index.html",
 	"general" : 
 	{
@@ -129,6 +129,8 @@
 	"preview" : "preview.jpg",
 	"ratingsex" : "none",
 	"ratingviolence" : "none",
+	"snapshotformat" : -1,
+	"snapshotoverlay" : "",
 	"tags" : [ "Sci-Fi" ],
 	"title" : "Staring At The Moon",
 	"type" : "web",

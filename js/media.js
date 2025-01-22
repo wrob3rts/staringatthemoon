@@ -31,7 +31,7 @@ function wallpaperMediaPlaybackListener(event) {
 }
 
 function wallpaperMediaThumbnailListener(event){
-    albumCover.src = event.thumbnail;
+    albumCover.src = event.thumbnail != null ? event.thumbnail : "../img/clear.png";
 }
 
 window.wallpaperRegisterMediaPropertiesListener(wallpaperMediaPropertiesListener);
